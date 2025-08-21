@@ -30,7 +30,7 @@ public class G_Triple {
 		System.out.println("메뉴 번호를 입력해주세요 > ");
 		int menuNo = sc.nextInt();
 							   // 조건식 
-		String selectedMenu = (menuNo == 1) ? "1.더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
+		String selectedMenu = (menuNo == 1) ? "1. 더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
 							: (menuNo == 2) ? "2. 자몽 망고 코코 프라푸치노를 주문하셨습니다."
 							: (menuNo == 3) ? "3. 카페 브뤨레 프라푸치노를 주문하셨습니다."
 							: "없는 메뉴를 주문하셨습니다.";
@@ -67,8 +67,8 @@ public class G_Triple {
 	//필요한 값을 입력받을 수 있도록 메시지 출력
 	System.out.print("숫자를 입력해 주세요 > ");
 		
-	// 정수형 변수를 선언란 뒤 스캐너의 메소드를 호출해서 입력 버퍼에 있는 정수값을 받아와서
-	//전수형 변수 공간에 초기화
+	// 정수형 변수를 선언한 뒤 스캐너의 메소드를 호출해서 입력버퍼에 있는 정수값을 받아와서
+	// 정수형 변수 공간에 초기화
 	
 	int num = sc.nextInt();
 	// System.out.println("착하게 사는법 : 변수값 찍어보기 > " + num);
@@ -102,7 +102,7 @@ public class G_Triple {
 		
 		
 		
-		char result = (('a' <= ch) &&(ch <= 'z')) ? '소' : '대';
+		char result = (('a' <= ch) && (ch <= 'z')) ? '소' : '대';
 		System.out.println(ch + "는 "+ result + "문자입니다.");
 	}
 	

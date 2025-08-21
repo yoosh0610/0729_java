@@ -46,7 +46,7 @@ public class E_Comparison {
 		// 2로 나눴을 때 나머지가 0임?
 		System.out.println("firetNumber가 짝 수 입니까? : " + (firetNumber % 2 == 0));
 		
-		System.out.println("secondNumber가 홀 수가 아닙니까?" + (secondNumber %2 != 1));
+		System.out.println("secondNumber가 홀 수가 아닙니까?" + (secondNumber % 2 != 1));
 		
 		
 	}

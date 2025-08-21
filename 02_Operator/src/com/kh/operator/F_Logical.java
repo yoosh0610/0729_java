@@ -75,7 +75,7 @@ public class F_Logical {
 		// 2_1. (0 < number) && (number < 101)
 		// 2_2. (100 >= number) && (1 <= number)
 		// 2_3. (1 <= number) && (number <= 100) <- 선호(가독성이 좋아서)
-						// 문자가 모여있고 질물의 숫자가 같아서
+						// 문자가 모여있고 질문의 숫자가 같아서
 		// 사용자가 입력한 값이 1 ~ 100 사이의 값인지를 판별하여 출력해줄것
 		boolean result = (1 <= number) && (number <= 100);
 		System.out.println("입력값이 1부터 100사이의 값입니까? : " + result);

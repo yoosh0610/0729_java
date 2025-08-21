@@ -69,7 +69,7 @@ public class A_If {
 		//System.out.println(weather == "비옴");
 		// 문자열값 비교
 		// 동등비교연산자(==)를 사용할 수 없음
-		// .equals()를 호출해야 함
+		// .equals()를 호출해야 함 => 문자열의 동등비교 하는 코드
 		//System.out.println(weather.equals("비옴"));
 		
 		// 조건
@@ -104,15 +104,15 @@ public class A_If {
 		System.out.print("0보다 큰 정수 주세요 > ");
 		int number = sc.nextInt();
 		// System.out.println(number);
-		// 조건식은 비교연산(값, 으로 만든다
+		// 조건식은 비교연산(값, true)으로 만든다
 		// 조건식
 		// 1. 입력받은 정수가 0보다 클 경우에만
 		//		number > 0
 		//					&&
 		//2. 홀 / 짝
 		// 입력받은 정수를 2로 나눈 나머지를 0과 동등비교해서 
-		// 	number  %   2 	== 		0  짝수(true 일 때)
-		// 	number  %   2	== 		0  홀수(true 일 때)
+		// 	number  %   2 	== 		0  => 짝수(true 일 때)
+		// 	number  %   2	!= 		0  => 홀수(true 일 때)
 		
 		if(number % 2 == 0 && number > 0){ System.out.println("짝수");}
 		if(number % 2 != 0 && number > 0) System.out.println("홀수");

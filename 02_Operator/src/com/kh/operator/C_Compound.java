@@ -18,7 +18,7 @@ public class C_Compound {
 	/*
 	 * 예시
 	 * 
-	 * int endDays =129;
+	 * int endDays = 129;
 	 * 
 	 * 매일 23시 59분 59초에 실행할 코드 : 
 	 * 

@@ -91,7 +91,7 @@ public class C_Switch {
 		case "부대찌개"  -> 11000;
 		case "떡갈비"  -> 13000;
 		case "칼국수"  -> 8000;
-		case "제육볶음" ,"수제비"   -> 7000;
+		case "제육볶음", "수제비"   -> 7000;
 		System.out.println(result + "원 입니다.")
 		}
 		*/
