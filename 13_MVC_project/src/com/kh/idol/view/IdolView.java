@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.kh.idol.controller.IdolController;
+import com.kh.idol.model.vo.Board;
 import com.kh.idol.model.vo.Fan;
 import com.kh.idol.model.vo.Idol;
 
@@ -193,10 +194,11 @@ public class IdolView {
 			System.out.println("4. 메인메뉴로 돌아가기");
 			System.out.println("당신의 선택은?");
 			int menuNo = sc.nextInt();
-		
+			sc.nextLine();
+			
 			switch(menuNo) {
 			case 1 : post(); break;
-			case 2 : break;
+			case 2 : selectBoardList(); break;
 			case 3 : break;
 			case 4 : return;
 			}
@@ -220,10 +222,37 @@ public class IdolView {
 			
 			ic.post(bosrdTitle, bosrdContent, loginFan.getUserId());
 			
+			System.out.println("게시글 작성 성공~~!");
+			
 		}else {
 			System.out.println("로그인 후 이용가능한 서비스입니다.");
 		}
-		
-		
 	}
+	
+	private void selectBoardList(){
+		
+		System.out.println();
+		System.out.println("\n전체 게시글 목록입니다.");
+		System.out.println();
+		
+		List<Board> boardList = ic.selectBoardList();
+		// 경우의 수 생각
+		// boardList == null일수가 절대 없음 => 요소의 개수 0이 아닌지 =>.isEmpty()
+		if(boardList.isEmpty()) {
+			System.out.println("게시글이 아직 존재하지 않습니다.");
+			System.out.println();
+			System.out.println("첫 게시글의 주인공이 되어 보세요~!");
+		} else {
+			for(Board board : boardList) {
+				System.out.println("글 번호 : " + board.getBosrdNo() + "\t");
+				System.out.println("글 제목 : " + board.getBosrdTitle() + "\t");
+				System.out.println("작성자 : " + board.getUserId() + "\t");
+				System.out.println("작성일 : " + board.getCreateDate());
+				System.out.println();
+			}
+		}
+	}
+	
+	
+	
 }
