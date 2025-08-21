@@ -86,7 +86,7 @@ public class IdolController {
 	}
 	
 	// 사용자가 로그인 요청 시 호출되는 메소드
-	public void login(String userId, String userPw) {
+	public Fan login(String userId, String userPw) {
 		
 		//컨트롤러가 가지고 있는
 		// Fan의 정보를 필드에 저장하고 잇는 Fan객체들의 주소를 가지고 잇는
@@ -107,5 +107,12 @@ public class IdolController {
 		
 	}
 	
-	
+	// 로그인에 성공한 사용자가 게시글 작성 요청을 할 때 마다 호출이 되는 메소드
+	public void post(String bosrdTitle, String bosrdContent, String userId) {
+		// 기존 bosrdNo 보다 1증가시킨 값과
+		// 사용자가 입력한 게시글 제목, 내용 값과
+		// 현재 로그인된 사용자의 아이디 값과
+		// 현재 게시글 작성 요청이 들어온 시간
+		
+	}
 }

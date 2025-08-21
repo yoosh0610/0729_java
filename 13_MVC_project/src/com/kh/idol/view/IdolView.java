@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.kh.idol.controller.IdolController;
+import com.kh.idol.model.vo.Fan;
 import com.kh.idol.model.vo.Idol;
 
 public class IdolView {
@@ -12,6 +13,8 @@ public class IdolView {
 	
 	private Scanner sc = new Scanner(System.in);
 	private IdolController ic = new IdolController();
+	// 로그인에 성공한 회원의 정보를 담아줄 필드
+	private Fan loginFan;
 	
 	// 생성자
 	
@@ -38,7 +41,7 @@ public class IdolView {
 			case 1 : infoMenu(); break;
 			case 2 : signUp(); break;
 			case 3 : login(); break;
-			case 4 : break;
+			case 4 : boardMenu(); break;
 			case 5 : return;
 			default : System.out.println("잘못된 메뉴를 선택하셨습니다.");
 			}
@@ -114,7 +117,7 @@ public class IdolView {
 			System.out.print("가입하실 아이디를 입력해주세요. > ");
 			userId = sc.nextLine();
 		
-			// 하나의 메소드는 하나의 기능만 => 분리!!
+			// 하나의 메소드는 하나의 기능만 => 분리!! 책임도 마찮가지
 			// 하나의 메소드는 하나의 기능만을 수행해야 한다.
 			// 하지만 지금 이 회원가입 메소드는 
 			// 회원가입 뿐만 아니라 아이디값에 대한 유효성검증을 진행하고 있다.
@@ -169,9 +172,58 @@ public class IdolView {
 		System.out.println("비밀번호를 입력하세요. > ");
 		String userPw = sc.nextLine();
 		
-		ic.login(userId, userPw);
+		Fan fan = ic.login(userId, userPw);
+		
+		if(fan != null) {
+			System.out.println(fan.getNickName() + "님 환영합니다.");
+			loginFan = fan;//얉은복사 -> 똑같은 주소값을 가리킴
+		}else {
+			System.out.println("로그인 실패! 아이디 또는 비밀번호를 확인해주세요.");
+		}
+	}
+	
+	private void boardMenu() {
+		
+		while(true) {
+			System.out.println("\n에스파 게시판입니다.");
+			System.out.println("이용하실 메뉴를 선택해주세요.");
+			System.out.println("1. 게시글 작성");
+			System.out.println("2. 게시글 전체 조회");
+			System.out.println("3. 게시글 상세조회");
+			System.out.println("4. 메인메뉴로 돌아가기");
+			System.out.println("당신의 선택은?");
+			int menuNo = sc.nextInt();
+		
+			switch(menuNo) {
+			case 1 : post(); break;
+			case 2 : break;
+			case 3 : break;
+			case 4 : return;
+			}
+		}
+	}
+	
+	private void post() {
+		
+		System.out.println("\n게시글 작성 서비스입니다.");
+		
+		//전제조건 :  로그인한 사용자만 게시글을 작성할수 있음
+		// 1. 변수?
+		// 2. if?
+		// 3. for?
+		//로그인이 되어 있을것
+		if(loginFan != null) {
+			System.out.print("게시글 제목을 입력해주세요.");
+			String bosrdTitle = sc.nextLine();
+			System.out.print("게시글 내용을 입력해주세요.");
+			String bosrdContent = sc.nextLine();
+			
+			ic.post(bosrdTitle, bosrdContent, loginFan.getUserId());
+			
+		}else {
+			System.out.println("로그인 후 이용가능한 서비스입니다.");
+		}
 		
 		
 	}
-	
 }
