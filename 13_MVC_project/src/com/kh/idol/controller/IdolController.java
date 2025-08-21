@@ -137,11 +137,16 @@ public class IdolController {
 		// View에 요청에 의해 호출되며,
 		// 게시글 목록이 담겨있는 것을 되돌려주어야 함
 		return boards;
+	}
+	
+	public Board findByBoardNo(int boardNo) {
 		
-		
-		
-		
+		if(boardNo > this.boardNo) {
+			return null;
+		}
+		return boards.get(boardNo - 1);
 		
 	}
+	
 	
 }
