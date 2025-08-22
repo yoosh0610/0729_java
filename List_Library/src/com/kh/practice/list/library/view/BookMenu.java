@@ -78,7 +78,18 @@ public class BookMenu {
 			System.out.print("저자명 : ");
 			String author = sc.nextLine();
 			System.out.print("장르(1. 인문 / 2. 과학 / 3. 외국어 / 4. 기타) : ");
-			String category = sc.nextInt();
+			int category = sc.nextInt();
+			String category = "";
+
+	        if (category == 1) {
+	            category = "인문";
+	        } else if (category == 2) {
+	            category = "자연과학";
+	        } else if (category == 3) {
+	            category = "의료";
+	        } else if (category == 4) {
+	            category = "기타";
+	        }
 			sc.nextLine();
 			System.out.print("가격 : ");
 			int price = sc.nextInt();

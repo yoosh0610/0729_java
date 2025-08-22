@@ -96,7 +96,7 @@ public class C_Switch {
 		}
 		*/
 		
-		int price = 0; //변수는 자신이 소환되 스코프 안에서 사용할 수 있다. 초기화 후 사용가능
+		int price = 0; //변수는 자신이 소환되어 스코프 안에서 사용할 수 있다. 초기화 후 사용가능
 		switch(menu) {
 		case "부대찌개" : price = 11000; break;
 		case "떡갈비"	  : price = 13000; break;
