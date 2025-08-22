@@ -51,7 +51,7 @@ public class StringController {
 		//hashCode 자신의 value값을
 		
 		// 3. String클래스의 hashCode()
-		// 주소값을 해싱하는것이 아니라 실제 담긴 문자열값을 기반으로 해시코드  값을 만ㄷ즐도록 오버라이딩
+		// 주소값을 해싱하는것이 아니라 실제 담긴 문자열값을 기반으로 해시코드  값을 만들도록 오버라이딩
 		
 		//진짜 저 참조형 변수들을 식별할 수 있는 값을 알아내는 법
 		// System.identityHashCode(참조형변수)

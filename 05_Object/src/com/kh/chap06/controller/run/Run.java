@@ -34,7 +34,7 @@ public class Run {
 		//System.out.println("method3 호출 결과 : " + mc.method3());
 		//출력하는 용도의 메소드(인자값으로 출력할 값을 받음)
 		// String parameter = "method3 호출 결과 : " + mc.method3();
-		//
+		
 		//int result = mc.method5(2);
 		//System.out.println(result);
 		// mc.a();  stick터짐
