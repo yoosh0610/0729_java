@@ -13,8 +13,8 @@ public class Run {
 		kf.setFoodName("비빔밥");
 		System.out.println(kf.getFoodName());
 		
-		//호출을 하는 메소드가 해당 클래스에 존재하지 않는다면
-		//자동으로 해당 클래스의 부모클래스에 있는 메소드를 호출
+		// 호출을 하는 메소드가 해당 클래스에 존재하지 않는다면
+		// 자동으로 해당 클래스의 부모클래스에 있는 메소드를 호출
 		
 		ItalyFood yf = new ItalyFood("기름파스타", "기름", 15, 5);
 		System.out.println(yf.information());
@@ -47,7 +47,7 @@ public class Run {
 		 * - 명시되어 있지는 않지만 모든 클래스는 Object클래스의 후손클래스
 		 * 	(내가 만든 클래스, 자바에서 원래 제공하는 클래스)
 		 * 
-		 * =>Object클래스에 있는 맴버응 사용할수 있음
+		 * =>Object클래스에 있는 맴버를 사용할수 있음
 		 * =>Object클래스에 있는 메소드가 마음에 안든다면 재정의를 할 수 있음
 		 * 
 		 */

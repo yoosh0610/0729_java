@@ -20,7 +20,7 @@ public class Run {
 		//Map 객체이름 = new HashMap();
 		
 		//Key == 식별자
-		//Value == 생선객체
+		//Value == 생성객체
 		
 		Map<String, Fish> apuarium = new HashMap();
 		

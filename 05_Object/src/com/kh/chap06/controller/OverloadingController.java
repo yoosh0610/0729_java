@@ -38,7 +38,7 @@ public class OverloadingController {
 	/*
 	public String test(int c, int d) {
 	}
-	변환형과는 상관없이 매개변수의 개수와 순서응 항상 다르게 작성해야함
+	변환형과는 상관없이 매개변수의 개수와 순서는 항상 다르게 작성해야함
 	접근 제한자와는 상관없이 매개변수의 개수와 순서를 다르게 작성해야함
 	*/
 	

@@ -9,9 +9,9 @@ public class Run {
 	public static void main(String[] args) {
 		
 		// 외부 매서드에 존재하는 메소드를 호출하고 싶다.
-		// 생성해야 한다. 별칭 붙여서
+		// 생성해야 한다. 별칭 붙여서 => 변수선언
 		// 클래스이름 클래스별칭 = new 클래스이름();
-		// 패키지가 불러올 클래스와현재 클래스가 다를때 패키지까지 입력 
+		// 패키지가 불러올 클래스와 현재 클래스가 다를때 패키지까지 입력 
 		// com.kh.variable.A_Variable a = new com.kh.variable.A_Variable();
 		//풀 클래스 명
 		

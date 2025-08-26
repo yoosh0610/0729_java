@@ -27,8 +27,8 @@ public class ArrayRun {
 		
 		//객체배열의 선언 및 할당!
 		// [ 표현법 ]
-		// 기본자료형[] 배열식별자 = new 기본자료현[배열크기]; => 배열
-		// 참조자료형[] 배열식별자 = new 참조자료현[배열크기]; => 객체배열
+		// 기본자료형[] 배열식별자 = new 기본자료형[배열크기]; => 배열
+		// 참조자료형[] 배열식별자 = new 참조자료형[배열크기]; => 객체배열
 		
 		Restaurant[] restaurants = new Restaurant[3];
 		Scanner sc = new Scanner(System.in);

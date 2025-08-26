@@ -29,7 +29,7 @@ public class Array {
 	 * 
 	 * 자바라는 *언어 자체에 내장된* "유일"한 자료구조 // 값(data)을 어떻게 저장할것인가에 대한 것
 	 * 
-	 * => 배열의 각 인덱스(index)에 실제 값이 담김 index는 '0'부터 시작한다.
+	 * => 배열의 각 인덱스(index)에 실제 값이 담김, index는 '0'부터 시작한다.
 	 */
 
 	public void method1() {
